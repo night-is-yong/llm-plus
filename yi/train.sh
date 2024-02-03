@@ -1,0 +1,19 @@
+python train.py \
+  --train_data_path ./yi/yi_example_dataset \
+  --model_name_or_path /home/chuan/models/01ai/Yi-34B-Chat \
+  --model_type yi \
+  --lora_target_modules q_proj \
+  --use_4_bit \
+  --per_device_train_batch_size 1 \
+  --bf16 \
+  --max_seq_length 512 \
+  --learning_rate 2e-6 \
+  --weight_decay 0. \
+  --num_train_epochs 4 \
+  --gradient_accumulation_steps 2 \
+  --lr_scheduler_type cosine \
+  --num_warmup_steps 0 \
+  --seed 1234 \
+  --gradient_checkpointing \
+  --deepspeed yi/ds_config_zero2.json \
+  --output_dir output
