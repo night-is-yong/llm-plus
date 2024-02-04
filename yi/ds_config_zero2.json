@@ -19,7 +19,7 @@
             "pin_memory": true
         },
         "offload_optimizer": {
-            "device": "none",
+            "device": "cpu",
             "pin_memory": true
         },
         "stage3_param_persistence_threshold": 10000.0,
