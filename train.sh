@@ -7,10 +7,10 @@ DISTRIBUTED_ARGS="
 "
 
 torchrun $DISTRIBUTED_ARGS train.py \
-    --model_name_or_path /home/chuan/models/baichuan-inc/Baichuan2-13B-Chat \
-    --train_data_path baichuan/baichuan_example_dataset/belle_chat_ramdon_10k.json \
-    --model_type baichuan \
-    --lora_target_modules W_pack \
+    --model_name_or_path /home/chuan/models/01ai/Yi-34B-Chat \
+    --train_data_path yi/yi_example_dataset \
+    --model_type yi \
+    --lora_target_modules q_proj \
     --use_4_bit \
     --bf16 \
     --max_seq_length 512 \
@@ -31,5 +31,5 @@ torchrun $DISTRIBUTED_ARGS train.py \
     --report_to "none" \
     --seed 1234 \
     --gradient_checkpointing \
-    --deepspeed baichuan/deepspeed.json \
+    --deepspeed yi/ds_config_zero2.json \
     --output_dir output \

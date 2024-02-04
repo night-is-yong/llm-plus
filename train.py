@@ -43,7 +43,7 @@ def main():
             from yi.yi_dataset import create_prompt_dataset
             train_dataset, eval_dataset = create_prompt_dataset(
                 0,
-                ['./yi_example_dataset'],
+                [data_args.train_data_path],
                 '10, 0, 0',
                 data_args.output_path,
                 0,
@@ -82,18 +82,21 @@ def main():
         task_type="CAUSAL_LM"
     )
 
+    model = prepare_model_for_kbit_training(model)
     model = get_peft_model(model, peft_config)
-    model.enable_input_require_grads()
     model.print_trainable_parameters()
 
     trainer = SFTTrainer(
         packing=True,
         model=model,
         tokenizer=tokenizer,
-        args=training_args, **data_module
+        max_seq_length=data_args.max_seq_length,
+        args=training_args,
+        **data_module
     )
 
     trainer.train()
+    trainer.save_model(data_args.output_path)
 
 
 if __name__ == '__main__':

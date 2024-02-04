@@ -3,13 +3,24 @@
     "train_micro_batch_size_per_gpu": 1,
     "gradient_accumulation_steps": "auto",
     "steps_per_print": 100,
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": "auto",
+            "betas": "auto",
+            "eps": "auto",
+            "weight_decay": "auto"
+        }
+    },
     "zero_optimization": {
         "stage": 2,
         "offload_param": {
-            "device": "cpu"
+            "device": "cpu",
+            "pin_memory": true
         },
         "offload_optimizer": {
-            "device": "cpu"
+            "device": "none",
+            "pin_memory": true
         },
         "stage3_param_persistence_threshold": 10000.0,
         "stage3_max_live_parameters": 30000000.0,
