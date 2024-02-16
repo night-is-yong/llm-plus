@@ -1,0 +1,13 @@
+defaults:
+  - _base_
+  - _self_
+
+experiment_name: awq-batch_size(${benchmark.input_shapes.batch_size})-sequence_length(${benchmark.input_shapes.sequence_length})-new_tokens(${benchmark.new_tokens})
+
+backend:
+  no_weights: true
+  model: /home/chuan/models/qwen/Qwen1___5-7B-Chat-AWQ
+  quantization_scheme: awq
+  quantization_config:
+    bits: 4
+  torch_dtype: float16

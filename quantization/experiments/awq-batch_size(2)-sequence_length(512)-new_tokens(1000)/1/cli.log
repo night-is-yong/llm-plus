@@ -1,0 +1,53 @@
+[2024-02-16 22:32:05,605][inference][WARNING] - `new_tokens` is deprecated. Use `max_new_tokens` and `min_new_tokens` instead. Setting `max_new_tokens` and `min_new_tokens` to `new_tokens`.
+[2024-02-16 22:32:05,871][launcher][INFO] - ََAllocating process launcher
+[2024-02-16 22:32:05,872][process][INFO] - 	+ Launched worker process with PID 279866.
+[2024-02-16 22:32:07,531][datasets][INFO] - PyTorch version 2.2.0 available.
+[2024-02-16 22:32:07,891][backend][INFO] - َAllocating pytorch backend
+[2024-02-16 22:32:07,891][backend][INFO] - 	+ Setting random seed to 42
+[2024-02-16 22:32:08,075][pytorch][INFO] - 	+ Using AutoModel class AutoModelForCausalLM
+[2024-02-16 22:32:08,075][pytorch][INFO] - 	+ Processing quantization config
+[2024-02-16 22:32:08,075][pytorch][INFO] - 	+ Processing AWQ config
+[2024-02-16 22:32:08,085][pytorch][INFO] - 	+ Creating backend temporary directory
+[2024-02-16 22:32:08,085][pytorch][INFO] - 	+ Loading model with no weights
+[2024-02-16 22:32:08,085][pytorch][INFO] - 	+ Creating no weights model state_dict
+[2024-02-16 22:32:08,086][pytorch][INFO] - 	+ Creating no weights model directory
+[2024-02-16 22:32:08,086][pytorch][INFO] - 	+ Saving no weights model pretrained config
+[2024-02-16 22:32:08,087][pytorch][INFO] - 	+ Saving no weights model state_dict
+[2024-02-16 22:32:08,087][pytorch][INFO] - 	+ Loading no weights model
+[2024-02-16 22:32:08,087][pytorch][INFO] - 	+ Loading quantized model
+[2024-02-16 22:32:09,680][pytorch][INFO] - 	+ Randomizing model weights
+[2024-02-16 22:32:09,682][pytorch][INFO] - 	+ Tying model weights
+[2024-02-16 22:32:09,683][pytorch][INFO] - 	+ Turning on model's eval mode
+[2024-02-16 22:32:09,765][benchmark][INFO] - Allocating inference benchmark
+[2024-02-16 22:32:09,765][inference][INFO] - 	+ Creating input generator
+[2024-02-16 22:32:09,766][input][INFO] - 	+ Using text-generation task generator
+[2024-02-16 22:32:09,766][inference][INFO] - 	+ Generating and preparing Text Generation input
+[2024-02-16 22:32:09,766][pytorch][INFO] - 	+ Moving inputs tensors to device cuda
+[2024-02-16 22:32:09,766][pytorch][INFO] - 	+ Moving inputs tensors to device cuda
+[2024-02-16 22:32:09,766][inference][INFO] - 	+ Updating Text Generation kwargs with default values
+[2024-02-16 22:32:09,766][inference][INFO] - 	+ Initializing Text Generation report
+[2024-02-16 22:32:09,766][inference][INFO] - 	+ Preparing backend for Inference
+[2024-02-16 22:32:09,766][inference][INFO] - 	+ Warming up backend for Inference
+[2024-02-16 22:32:11,577][inference][INFO] - 	+ Creating inference memory tracker
+[2024-02-16 22:32:11,577][memory][INFO] - 	+ Tracking VRAM memory of CUDA devices: [0]
+[2024-02-16 22:32:11,577][memory][INFO] - 	+ Tracking Pytorch memory of Pytorch CUDA devices: [0]
+[2024-02-16 22:32:11,577][inference][INFO] - 	+ Running memory tracking
+[2024-02-16 22:32:29,816][report][INFO] - 	+ prefill.memory.max_vram_used(MB): 10233.000000 (MB)
+[2024-02-16 22:32:29,816][report][INFO] - 	+ prefill.memory.max_memory_reserved(MB): 8627.000000 (MB)
+[2024-02-16 22:32:29,816][report][INFO] - 	+ prefill.memory.max_memory_allocated(MB): 7932.000000 (MB)
+[2024-02-16 22:32:29,816][report][INFO] - 	+ decode.memory.max_vram_used(MB): 17583.000000 (MB)
+[2024-02-16 22:32:29,816][report][INFO] - 	+ decode.memory.max_memory_reserved(MB): 15978.000000 (MB)
+[2024-02-16 22:32:29,816][report][INFO] - 	+ decode.memory.max_memory_allocated(MB): 10812.000000 (MB)
+[2024-02-16 22:32:29,816][inference][INFO] - 	+ Creating inference latency tracker
+[2024-02-16 22:32:29,816][latency][INFO] - 	+ Tracking Pytorch CUDA latency
+[2024-02-16 22:32:29,816][inference][INFO] - 	+ Running latency tracking
+[2024-02-16 22:32:54,316][report][INFO] - 	+ prefill.latency.mean(s): 0.131625 (s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ prefill.latency.stdev(s): 0.000579 (s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ prefill.throughput.mean[tokens/s]: 7779.832216 (tokens/s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ prefill.throughput.stdev[tokens/s]: 33.426928 (tokens/s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ decode.latency.mean(s): 14.361985 (s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ decode.latency.stdev(s): 0.000000 (s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ decode.throughput.mean[tokens/s]: 139.256515 (tokens/s)
+[2024-02-16 22:32:54,317][report][INFO] - 	+ decode.throughput.stdev[tokens/s]: 0.000000 (tokens/s)
+[2024-02-16 22:32:54,317][backend][INFO] - Cleaning pytorch backend
+[2024-02-16 22:32:54,402][pytorch][INFO] - 	+ Cleaning backend temporary directory

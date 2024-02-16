@@ -1,0 +1,45 @@
+[2024-02-16 22:23:51,099][inference][WARNING] - `new_tokens` is deprecated. Use `max_new_tokens` and `min_new_tokens` instead. Setting `max_new_tokens` and `min_new_tokens` to `new_tokens`.
+[2024-02-16 22:23:51,439][launcher][INFO] - ََAllocating process launcher
+[2024-02-16 22:23:51,439][process][INFO] - 	+ Setting multiprocessing start method to spawn.
+[2024-02-16 22:23:51,441][process][INFO] - 	+ Launched worker process with PID 278947.
+[2024-02-16 22:23:53,107][datasets][INFO] - PyTorch version 2.2.0 available.
+[2024-02-16 22:23:53,462][backend][INFO] - َAllocating pytorch backend
+[2024-02-16 22:23:53,462][backend][INFO] - 	+ Setting random seed to 42
+[2024-02-16 22:23:53,641][pytorch][INFO] - 	+ Using AutoModel class AutoModelForCausalLM
+[2024-02-16 22:23:53,641][pytorch][INFO] - 	+ Creating backend temporary directory
+[2024-02-16 22:23:53,641][pytorch][INFO] - 	+ Loading model with pretrained weights
+[2024-02-16 22:23:53,641][pytorch][INFO] - 	+ Loading model directly on device: cuda
+[2024-02-16 22:23:56,139][pytorch][INFO] - 	+ Turning on model's eval mode
+[2024-02-16 22:23:56,229][benchmark][INFO] - Allocating inference benchmark
+[2024-02-16 22:23:56,230][inference][INFO] - 	+ Creating input generator
+[2024-02-16 22:23:56,230][input][INFO] - 	+ Using text-generation task generator
+[2024-02-16 22:23:56,230][inference][INFO] - 	+ Generating and preparing Text Generation input
+[2024-02-16 22:23:56,230][pytorch][INFO] - 	+ Moving inputs tensors to device cuda
+[2024-02-16 22:23:56,230][pytorch][INFO] - 	+ Moving inputs tensors to device cuda
+[2024-02-16 22:23:56,231][inference][INFO] - 	+ Updating Text Generation kwargs with default values
+[2024-02-16 22:23:56,231][inference][INFO] - 	+ Initializing Text Generation report
+[2024-02-16 22:23:56,231][inference][INFO] - 	+ Preparing backend for Inference
+[2024-02-16 22:23:56,231][inference][INFO] - 	+ Warming up backend for Inference
+[2024-02-16 22:23:57,458][inference][INFO] - 	+ Creating inference memory tracker
+[2024-02-16 22:23:57,458][memory][INFO] - 	+ Tracking VRAM memory of CUDA devices: [0]
+[2024-02-16 22:23:57,458][memory][INFO] - 	+ Tracking Pytorch memory of Pytorch CUDA devices: [0]
+[2024-02-16 22:23:57,458][inference][INFO] - 	+ Running memory tracking
+[2024-02-16 22:24:20,988][report][INFO] - 	+ prefill.memory.max_vram_used(MB): 17958.000000 (MB)
+[2024-02-16 22:24:20,988][report][INFO] - 	+ prefill.memory.max_memory_reserved(MB): 16819.000000 (MB)
+[2024-02-16 22:24:20,988][report][INFO] - 	+ prefill.memory.max_memory_allocated(MB): 16729.000000 (MB)
+[2024-02-16 22:24:20,988][report][INFO] - 	+ decode.memory.max_vram_used(MB): 20148.000000 (MB)
+[2024-02-16 22:24:20,988][report][INFO] - 	+ decode.memory.max_memory_reserved(MB): 18526.000000 (MB)
+[2024-02-16 22:24:20,988][report][INFO] - 	+ decode.memory.max_memory_allocated(MB): 18168.000000 (MB)
+[2024-02-16 22:24:20,988][inference][INFO] - 	+ Creating inference latency tracker
+[2024-02-16 22:24:20,988][latency][INFO] - 	+ Tracking Pytorch CUDA latency
+[2024-02-16 22:24:20,988][inference][INFO] - 	+ Running latency tracking
+[2024-02-16 22:24:50,922][report][INFO] - 	+ prefill.latency.mean(s): 0.057450 (s)
+[2024-02-16 22:24:50,922][report][INFO] - 	+ prefill.latency.stdev(s): 0.000368 (s)
+[2024-02-16 22:24:50,922][report][INFO] - 	+ prefill.throughput.mean[tokens/s]: 8912.467828 (tokens/s)
+[2024-02-16 22:24:50,922][report][INFO] - 	+ prefill.throughput.stdev[tokens/s]: 53.934228 (tokens/s)
+[2024-02-16 22:24:50,922][report][INFO] - 	+ decode.latency.mean(s): 19.816906 (s)
+[2024-02-16 22:24:50,922][report][INFO] - 	+ decode.latency.stdev(s): 0.000000 (s)
+[2024-02-16 22:24:50,923][report][INFO] - 	+ decode.throughput.mean[tokens/s]: 50.461964 (tokens/s)
+[2024-02-16 22:24:50,923][report][INFO] - 	+ decode.throughput.stdev[tokens/s]: 0.000000 (tokens/s)
+[2024-02-16 22:24:50,923][backend][INFO] - Cleaning pytorch backend
+[2024-02-16 22:24:51,002][pytorch][INFO] - 	+ Cleaning backend temporary directory

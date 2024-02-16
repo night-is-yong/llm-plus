@@ -79,7 +79,8 @@ def main():
         lora_dropout=model_args.lora_dropout,
         bias="none",
         target_modules=model_args.lora_target_modules,
-        task_type="CAUSAL_LM"
+        task_type="CAUSAL_LM",
+        modules_to_save=['output_layer']
     )
 
     model = prepare_model_for_kbit_training(model)

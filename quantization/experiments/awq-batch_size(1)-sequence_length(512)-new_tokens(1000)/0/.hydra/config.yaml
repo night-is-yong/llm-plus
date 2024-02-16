@@ -1,0 +1,75 @@
+backend:
+  name: pytorch
+  version: 2.2.0
+  _target_: optimum_benchmark.backends.pytorch.backend.PyTorchBackend
+  seed: 42
+  model: /home/chuan/models/qwen/Qwen1___5-7B-Chat-AWQ
+  device: cuda
+  device_ids: null
+  task: text-generation
+  library: transformers
+  inter_op_num_threads: null
+  intra_op_num_threads: null
+  hub_kwargs: {}
+  no_weights: true
+  device_map: null
+  torch_dtype: float16
+  amp_autocast: false
+  amp_dtype: null
+  eval_mode: true
+  to_bettertransformer: false
+  low_cpu_mem_usage: null
+  attn_implementation: null
+  cache_implementation: null
+  torch_compile: false
+  torch_compile_config: {}
+  quantization_scheme: awq
+  quantization_config:
+    bits: 4
+  deepspeed_inference: false
+  deepspeed_inference_config: {}
+  peft_strategy: null
+  peft_config: {}
+benchmark:
+  name: inference
+  _target_: optimum_benchmark.benchmarks.inference.benchmark.InferenceBenchmark
+  duration: 10
+  warmup_runs: 10
+  input_shapes:
+    batch_size: 1
+    sequence_length: 512
+  new_tokens: 1000
+  energy: false
+  memory: true
+  latency: true
+  forward_kwargs: {}
+  generate_kwargs: {}
+  call_kwargs: {}
+launcher:
+  name: process
+  _target_: optimum_benchmark.launchers.process.launcher.ProcessLauncher
+  device_isolation: false
+  start_method: spawn
+experiment_name: awq-batch_size(${benchmark.input_shapes.batch_size})-sequence_length(${benchmark.input_shapes.sequence_length})-new_tokens(${benchmark.new_tokens})
+task: null
+model: null
+device: null
+library: null
+environment:
+  cpu: ' Intel(R) Core(TM) i5-14600K'
+  cpu_count: 20
+  cpu_ram_mb: 201887
+  system: Linux
+  python_version: 3.10.13
+  transformers_version: 4.37.2
+  transformers_commit: null
+  accelerate_version: 0.27.2
+  accelerate_commit: null
+  diffusers_version: null
+  diffusers_commit: null
+  optimum_version: 1.16.2
+  optimum_commit: 7eca653000fae5b4d7c17ea850a060f8990c28af
+  timm_version: null
+  timm_commit: null
+  peft_version: 0.8.2
+  peft_commit: null
